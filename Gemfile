@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
+gem 'bootstrap-sass', '~> 3.3.1'
 
 group :production do
   gem 'pg', '0.17.1'
