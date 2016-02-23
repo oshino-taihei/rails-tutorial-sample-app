@@ -13,6 +13,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'bcrypt', '3.1.7'
+gem 'faker', '1.4.2'
+gem 'kaminari'
 
 group :production do
   gem 'pg', '0.17.1'
