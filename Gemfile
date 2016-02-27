@@ -24,6 +24,7 @@ end
 
 group :development do
   gem 'web-console'
+  gem "letter_opener", "~> 1.1.0"
 end
 
 group :test do
