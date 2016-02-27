@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
+  has_many :microposts, dependent: :destroy
+
   attr_accessor :remember_token, :activation_token
   before_save   :downcase_email
   before_create :create_activation_digest
-
   before_save { self.email = email.downcase }
   has_secure_password
 
@@ -64,5 +65,11 @@ class User < ActiveRecord::Base
   # 有効化用のメールを送信する
   def send_activation_email
     UserMailer.account_activation(self).deliver
+  end
+
+  # 試作feedの定義
+  # 完全な実装は第12章「ユーザーをフォローする」を参照してください。
+  def feed
+    Micropost.where("user_id = ?", id)
   end
 end
